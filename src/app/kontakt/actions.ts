@@ -1,5 +1,7 @@
 "use server";
 
+import { sendContactFormEmail } from "@/lib/smtp";
+
 export type ContactState =
   | { ok: true; message: string }
   | { ok: false; message: string; fieldErrors?: Record<string, string> };
@@ -40,7 +42,25 @@ export async function submitContact(
     };
   }
 
-  // Hinweis: Hier könnte z. B. E-Mail-Versand (Resend, SMTP) oder CRM-Webhook angebunden werden.
+  try {
+    await sendContactFormEmail({ name, email, phone, message });
+  } catch (err) {
+    console.error("Kontaktformular SMTP:", err);
+    const code = err instanceof Error ? err.message : "";
+    if (code === "MISSING_SMTP_CONFIG") {
+      return {
+        ok: false,
+        message:
+          "Der Versand ist derzeit nicht konfiguriert. Bitte kontaktieren Sie uns telefonisch.",
+      };
+    }
+    return {
+      ok: false,
+      message:
+        "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut oder rufen Sie uns an.",
+    };
+  }
+
   return {
     ok: true,
     message:
