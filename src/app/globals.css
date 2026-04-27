@@ -1,26 +1,43 @@
 @import "tailwindcss";
 
+/* Farben an Alpenklar-Logo: Tiefblau / Royal, Sky, Alm-Grün, Sonnengelb */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f0f4fb;
+  --foreground: #0c1929;
+  --accent: #1d4ed8;
+  --accent-hover: #1e3a8a;
+  --brand-sky: #0ea5e9;
+  --brand-sky-muted: #bae6fd;
+  --brand-navy: #172554;
+  --brand-meadow: #16a34a;
+  --brand-sun: #eab308;
+  --muted: #5a6b7d;
+  --card: #ffffff;
+  --border: #d2deef;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-brand-sky: var(--brand-sky);
+  --color-brand-sky-muted: var(--brand-sky-muted);
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-meadow: var(--brand-meadow);
+  --color-brand-sun: var(--brand-sun);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --font-sans: var(--font-brand), ui-sans-serif, system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 }
