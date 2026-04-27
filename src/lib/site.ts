@@ -8,7 +8,6 @@ export const site = {
   tagline: "Fenster-, Spiegel- & Glasreinigung in Wien",
   phoneDisplay: "+43 676 921 71 02",
   phoneTel: "+436769217102",
-  email: "office@alpenklar-wien.at",
   city: "Wien",
   country: "Österreich",
   serviceArea:

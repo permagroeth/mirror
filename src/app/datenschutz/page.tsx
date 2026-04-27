@@ -23,9 +23,7 @@ export default function DatenschutzPage() {
             <h2 className="text-lg font-semibold text-foreground">1. Verantwortlicher</h2>
             <p>
               Verantwortlich für die Datenverarbeitung im Sinne der Datenschutz-Grundverordnung
-              (DSGVO) ist {site.name}, erreichbar unter {site.email} und{" "}
-              {site.phoneDisplay}. Bitte ersetzen Sie diese Angaben vor Veröffentlichung durch
-              Ihre rechtsgültigen Unternehmensdaten (juristische Person, Adresse, UID-Nummer).
+              (DSGVO) ist {site.name}, erreichbar telefonisch unter {site.phoneDisplay}.
             </p>
           </section>
 

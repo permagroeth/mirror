@@ -11,13 +11,7 @@ export function JsonLd() {
       "@type": "City",
       name: site.city,
     },
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: site.city,
-      addressCountry: "AT",
-    },
     telephone: site.phoneDisplay,
-    email: site.email,
     url: siteUrl,
   };
 

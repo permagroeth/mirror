@@ -45,14 +45,6 @@ export default function KontaktPage() {
                 </dd>
               </div>
               <div>
-                <dt className="font-medium text-muted">E-Mail</dt>
-                <dd className="mt-1">
-                  <a href={`mailto:${site.email}`} className="font-medium text-foreground hover:text-accent">
-                    {site.email}
-                  </a>
-                </dd>
-              </div>
-              <div>
                 <dt className="font-medium text-muted">Einsatzgebiet</dt>
                 <dd className="mt-1 leading-relaxed text-foreground">{site.serviceArea}</dd>
               </div>

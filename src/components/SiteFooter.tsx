@@ -60,11 +60,6 @@ export function SiteFooter() {
                 {site.phoneDisplay}
               </a>
             </li>
-            <li>
-              <a href={`mailto:${site.email}`} className="hover:text-accent">
-                {site.email}
-              </a>
-            </li>
             <li>{site.serviceArea}</li>
           </ul>
         </div>

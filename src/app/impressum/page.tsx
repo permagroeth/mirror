@@ -21,27 +21,16 @@ export default function ImpressumPage() {
         <div className="mt-10 space-y-8 text-sm leading-relaxed text-muted">
           <section>
             <h2 className="text-lg font-semibold text-foreground">Medieninhaberin / Medieninhaber</h2>
-            <p className="mt-3">
-              {site.name}
-              <br />
-              Musterstraße 1/2/3
-              <br />
-              1010 {site.city}, {site.country}
-              <br />
-              <span className="text-foreground/80">
-                (Bitte Adresse und Rechtsform vor Livegang durch Ihre echten Unternehmensdaten
-                ersetzen.)
-              </span>
+            <p className="mt-3">{site.name}</p>
+            <p className="mt-2 text-foreground/80">
+              (Rechtsform, Ladungs- und Sitzadresse: auf Anfrage bzw. nach gesetzlichen Vorgaben
+              anzuführen, soweit erforderlich.)
             </p>
           </section>
 
           <section>
             <h2 className="text-lg font-semibold text-foreground">Kontakt</h2>
-            <p className="mt-3">
-              Telefon: {site.phoneDisplay}
-              <br />
-              E-Mail: {site.email}
-            </p>
+            <p className="mt-3">Telefon: {site.phoneDisplay}</p>
           </section>
 
           <section>
